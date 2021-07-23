@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Vue Gallery
+  <div class="ui secondary pointing menu">
+    <a href="/" class="active item">Vue Gallery</a>
   </div>
 </template>
 
