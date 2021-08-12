@@ -1,6 +1,6 @@
 import qs from 'qs';
 
-const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_ID = process.env.VUE_APP_CLIENT_ID;
 const ROOT_URL = 'https://api.imgur.com';
 
 export default {
