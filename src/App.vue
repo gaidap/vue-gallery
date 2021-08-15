@@ -12,7 +12,3 @@ export default {
   components: {AppHeader}
 }
 </script>
-
-<style scoped>
-
-</style>
