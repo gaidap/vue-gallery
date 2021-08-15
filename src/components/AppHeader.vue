@@ -2,7 +2,7 @@
   <div class="ui secondary pointing menu">
     <a href="/" class="active item">Vue Gallery</a>
     <div class="right menu">
-      <a href="/" class="ui item" @click="login">login</a>
+      <a href="#" class="ui item" @click="login">login</a>
     </div>
   </div>
 </template>
