@@ -10,5 +10,8 @@ export default {
             response_type: 'token'
         };
         window.location = `${ROOT_URL}/oauth2/authorize?${qs.stringify(querystring)}`;
+    },
+    logout() {
+        window.location = '/';
     }
 };
