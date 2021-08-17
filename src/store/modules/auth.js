@@ -23,6 +23,7 @@ const actions = {
         const callbackObject = qs.parse(hashString.replace('#', ''));
         commit('setToken', callbackObject.access_token);
         window.localStorage.setItem(IMGUR_TOKEN_KEY, callbackObject.access_token);
+        window.location = "/";
     }
 };
 
