@@ -2,7 +2,7 @@ import api from '@/api/imgur';
 import qs from "qs";
 import {router} from '@/main';
 
-const IMGUR_TOKEN_KEY = 'imgur_token';
+export const IMGUR_TOKEN_KEY = 'imgur_token';
 
 const state = {
     token: window.localStorage.getItem(IMGUR_TOKEN_KEY)
@@ -16,7 +16,7 @@ const actions = {
     logout: ({commit}) => {
         window.localStorage.removeItem(IMGUR_TOKEN_KEY);
         commit('setToken', null);
-        api.logout();
+        router.push('/');
     },
     login: () => {
         api.login();
