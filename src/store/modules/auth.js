@@ -1,5 +1,6 @@
-import api from '../../api/imgur';
+import api from '@/api/imgur';
 import qs from "qs";
+import {router} from '@/main';
 
 const IMGUR_TOKEN_KEY = 'imgur_token';
 
@@ -24,6 +25,7 @@ const actions = {
         const callbackObject = qs.parse(hashString.replace('#', ''));
         window.localStorage.setItem(IMGUR_TOKEN_KEY, callbackObject.access_token);
         commit('setToken', callbackObject.access_token);
+        router.push('/');
     }
 };
 
