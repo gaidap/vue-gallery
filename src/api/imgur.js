@@ -13,6 +13,5 @@ export default {
     },
     logout() {
         window.location = '/';
-        window.localStorage.clear();
     }
 };
