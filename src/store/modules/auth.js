@@ -13,8 +13,8 @@ const getters = {
 
 const actions = {
     logout: ({commit}) => {
-        commit('setToken', null);
         window.localStorage.removeItem(IMGUR_TOKEN_KEY);
+        commit('setToken', null);
         api.logout();
     },
     login: () => {
@@ -22,8 +22,8 @@ const actions = {
     },
     finalizeLogin: ({commit}, hashString) => {
         const callbackObject = qs.parse(hashString.replace('#', ''));
-        commit('setToken', callbackObject.access_token);
         window.localStorage.setItem(IMGUR_TOKEN_KEY, callbackObject.access_token);
+        commit('setToken', callbackObject.access_token);
     }
 };
 
