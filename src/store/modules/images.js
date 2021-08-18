@@ -15,6 +15,11 @@ const actions = {
         console.log(response);
         const {data} = response.data;
         commit('setImages', data);
+    },
+    uploadImages: async ({commit}, images) => {
+        console.log(images);
+        commit;
+        "";
     }
 };
 
