@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <img class="thumbnail" width="300" height="200" v-for="image in allImages" v-bind:key="image.id" :src="image.link" :alt="image.name"/>
+  <div class="image-container">
+    <img v-for="image in allImages" v-bind:key="image.id" :src="image.link" :alt="image.name"/>
   </div>
 </template>
 
@@ -16,3 +16,14 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.image-container {
+  column-count: 3;
+  column-gap: 0;
+}
+img {
+  max-width: 100%;
+  padding: 5px;
+}
+</style>
